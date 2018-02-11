@@ -1,0 +1,725 @@
+@import mixin
+
+.fa 
+	display: inline-block
+	font: normal normal normal 14px/1 FontAwesome
+	font-size: inherit
+	text-rendering: auto
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+h1
+	font-size: 3.157em
+h2
+	font-size: 2.369em	
+h3
+	font-size: 1.777em		
+h4
+	font-size: 1.333em		
+h5
+	font-size: 1em		
+.row
+	max-width: 940px
+	margin: 0 auto
+.hover
+	color: white
+.clearfix:after 
+	content: '.'
+	display: block
+	clear: both
+	visibility: hidden
+	height: 0
+/* ***** for debugging ***** */
+.bug
+	position: relative
+.bug:after
+	position: absolute
+	left: 50%
+	top: 50%
+	max-width: 99%
+	width: 288.922px
+	margin-left: -289.922px/2
+	margin-top: -19px
+	padding: 10px 0
+	content: "!!! Need FIX !!!"
+	font-size: 1em
+	text-align: center
+	border: 1px dashed red
+	color: red
+	z-index: 9999
+	cursor: pointer
+// for debugging 
+.fa-rss:before 
+	content: '\f09e'
+.rss-square:before
+	content: '\f143'
+.twitter-square:before
+	content: '\f081'
+.logo
+	a
+		color: #333333
+		font: 3em "Gotham Black"
+		span
+			color: $color_orange
+	p
+		color: #9f9f9f
+		font: .6875em "Gotham Narrow"
+		text-transform: uppercase	
+		overflow: hidden
+.img_line		
+	max-width: 100%
+	width: auto\9 /* ie8 */
+	height: auto	
+	margin: 5px 0
+.line_title
+	position: relative
+	height: 10px
+	background: url(../img/line.png)
+	background-size: 100% 100% 	
+	i
+		display: inline-block
+		height: 10px
+		position: absolute
+		top: -3px
+		left: 18px
+		padding: 0 9px 13px 9px
+		color: $color_orange
+		font-weight: 700
+		font-size: 10px
+		background-color: #FCFCFC
+		box-sizing: border-box				
+a,a:visited
+	text-decoration: none
+body
+	background-color: #FCFCFC
+	font: 100%/16px "Arial"
+.wrapper
+/* ***** header ***** */	
+header
+	position: relative
+	.top_bar
+		height: 35px
+		font-size: .75em
+		background: #2C2727 url(../img/black_denim.png) repeat
+		@include bs(0 10px 5px 0 rgba(239,239,239,1))
+		*
+			line-height: 35px 	
+			color: #565659	
+		p
+			color: #8C8989
+		.rss
+			float: left
+			i
+				margin-right: 5px
+			i:first-child
+				font-size: 18px
+			a,a:visited
+				color: $color-a_hover
+		.top_nav
+			float: right
+			li
+				display: inline 
+				margin-right: 5px 
+				padding: 3px
+				a,a:visited
+					color: $color-a
+				a:hover
+					color: $color-a_hover	
+	.header_bar	
+		margin-top: 40px
+		.logo
+			float: left
+		.banner
+			margin-bottom: 45px
+			width: 49.787234%
+			height: 60px
+			float: right
+			color: #8C8989
+			text-align: center
+			line-height: 60px
+			border: 1px solid #D5D5D5
+			@include bs($bs_blocks)
+	nav
+		clear: both
+		height: 51px
+		border: 1px solid #D9D9D9
+		@include br(3px)
+		ul
+			display: inline-table
+			position: relative
+			margin-right: -4.54px
+			list-style: none
+			li
+				float: left
+				background: rgba(255,255,255,1)
+				background: -moz-linear-gradient(top, rgba(#F9F9F9,1) 0%, rgba(246,246,246,1) 29%, rgba(247,247,247,1) 42%, rgba(244,244,244,1) 73%, rgba(242,242,242,1) 100%)
+				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(#F9F9F9,1)), color-stop(29%, rgba(246,246,246,1)), color-stop(42%, rgba(247,247,247,1)), color-stop(73%, rgba(244,244,244,1)), color-stop(100%, rgba(242,242,242,1)))
+				background: -webkit-linear-gradient(top, rgba(#F9F9F9,1) 0%, rgba(246,246,246,1) 29%, rgba(247,247,247,1) 42%, rgba(244,244,244,1) 73%, rgba(242,242,242,1) 100%)
+				background: -o-linear-gradient(top, rgba(#F9F9F9,1) 0%, rgba(246,246,246,1) 29%, rgba(247,247,247,1) 42%, rgba(244,244,244,1) 73%, rgba(242,242,242,1) 100%)
+				background: -ms-linear-gradient(top, rgba(#F9F9F9,1) 0%, rgba(246,246,246,1) 29%, rgba(247,247,247,1) 42%, rgba(244,244,244,1) 73%, rgba(242,242,242,1) 100%)
+				background: linear-gradient(to bottom, rgba(#F9F9F9,1) 0%, rgba(246,246,246,1) 29%, rgba(247,247,247,1) 42%, rgba(244,244,244,1) 73%, rgba(242,242,242,1) 100%)
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F9F9F9', endColorstr='#f2f2f2', GradientType=0 )
+				@include transition(all, .2s, ease-in-out)	
+				a
+					display: inline-block
+					padding: 18px 21px
+					text-align: center
+					color: #555555	
+					font: .8125em "HelveticaNeue bold"
+					border-right: 1px solid #D9D9D9
+				a:hover	
+					background: white
+					background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%)
+					background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)))
+					background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%)
+					background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%)
+					background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%)
+					background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%)
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 )
+			li:hover > ul
+				display: block
+			ul
+				display: none
+				position: absolute
+				top: 100%
+				border-left: 1px solid #D9D9D9
+				border-right: 1px solid #D9D9D9
+				border-bottom: 1px solid #D9D9D9
+				@include br_bottom(3px)
+				@include bs(-3px 3px 10px -2px rgba(0,0,0,.1))
+				z-index: 999
+				li
+					min-width: 140px
+					position: relative
+					float: none 
+					border-right: none
+					text-align: center
+					border-bottom: 1px solid #E3E3E3
+					a
+						width: 100%
+						/* margin: 0 19px */
+						padding: 15px 0
+						color: #777777
+						border-right: none
+					a:hover
+						color: #555555	
+				li:last-child
+					@include br_bottom(3px)
+					
+/* ***** conteiner ***** */	
+.conteiner
+	position: relative
+	min-height: 2044px /* fix */
+	margin-top: 20px /* 20px */
+	font: 100%/16px "HelveticaNeue bold"
+	.breadcrumb
+		display: inline-block
+		background-color: rgba(239,239,239,.7)
+		font-size: .6875em
+		color: $color-a
+		@include br(3px)
+		a,a:visited
+			display: inline-block
+			padding: 7px 0
+			color: $color-a
+		a:hover
+			color: $color_orange
+		a:first-child	
+			padding-left: 13px
+		a:last-child	
+			padding-right: 13px
+			
+/* ***** main ***** */	
+.conteiner	
+	margin-top: 46px
+	.main
+		//* !!! bug (position: absolute) *//
+		max-width: 65.95744580%
+		float: left /* !!! */
+		.cat_desc
+			margin-top: 27px
+			font-size: .75em
+			color: #444
+			line-height: 1.5
+			span
+				display: block
+				margin-top: 1px
+				color: #999
+				font: .8725em "Georgia"
+				a,a:visited
+					color: #444				
+		.latest-posts
+			margin-top: 12px
+			.latest-post
+				padding: 23px 25px
+				@include br(3px)
+				overflow: hidden
+				background: url(../img/post-bg.png)
+				background-size: 100% 100%
+				i
+					display: block
+					width: 275px /* 44.3548387% ??? */
+					height: 270px
+					margin-right: 20px
+					float: left
+					background-color: #D8D8D8
+				.tag	
+					display: inline-block
+					margin-bottom: 21px
+					padding: 4px 5px
+					color: white
+					font-size: .875em
+					@include br(3px)
+					background-color: $color_orange
+				article	
+					line-height: 1.5
+					color: rgba(white,.7)
+					overflow: hidden
+					.latest-p_title
+						margin-bottom: 19px
+						font-size: 1em
+					.post_info
+						display: inline-block
+						margin-bottom: 21px
+						color: #565659 
+						font-size: 0.75em
+						font-style: italic
+						a,a:visited
+							color: #bfbfbf
+							margin-left: 4px
+						a:hover
+							color: $color-a_hover
+					.latest-p_text
+						font-size: 0.8125em
+		.post_thmb		
+			display: block
+			width: 100%
+			height: 272px
+			margin: 12px 0 33px 0
+			background-color: #D8D8D8
+			border: 2px solid white
+			@include bs($bs_i-post)
+		.post_content 
+			p
+				font: .75em "HelveticaNeue light"
+				color: #444
+				line-height: 1.5
+			a,a:visited
+				padding: 1px
+				color: $color_orange
+				border-bottom: 1px solid #444
+			a:hover
+				border-bottom: 1px solid $color_orange
+			article	
+				margin-bottom: 71px
+				i:first-child	
+					display: block
+					width: 244px 
+					height: 244px
+					margin: 28px 25px 25px 0
+					float: left
+					background-color: #D8D8D8	
+					border: 2px solid white
+					@include bs($bs_i-post)
+			p:nth-child(3)	
+				margin-top: 24px
+			p:nth-child(4)
+				margin: 35px 50px 35px 0
+				max-width: 90%
+				font: italic 1em
+				span
+					margin: -12px 19px 0 50px
+					float: left
+					font: 700 72px "Hoefler Text"
+			p:nth-child(5)	
+				margin: 0 0 15px 0
+				float: left
+			p:nth-child(5),p:nth-child(6)	
+				max-width: 46%
+			p:nth-child(6)	
+				float: right
+			p:nth-child(5),p:nth-child(7),p:nth-child(8),p:nth-child(9)
+				float: left
+			p:nth-child(7)
+				clear: both
+			p:nth-child(7),p:nth-child(8),p:nth-child(9)
+				width: 29.462365591%
+			p:nth-child(7),p:nth-child(8)
+				margin-right: 36px
+			.about_author	
+				clear: both
+				.post 
+					margin-top: 30px
+					i
+						width: 80px/620px*100%
+						height: 80px
+						margin-right: 18px
+						float: left
+					p
+						margin-top: 5px
+						display: inline
+		.related_posts
+			ul
+				width: 100%	
+				list-style-type: none	
+			li
+				width: 24.46%
+				display: inline-block
+				text-align: center
+				i
+					width: 94px
+					height: 94px
+					margin-bottom: 0
+			.post
+				max-width: 121px
+				margin-top: 30px
+				a,a:visited
+					display: inline-block
+					margin-top: 10px
+					font-size: .6875em
+		.comments			
+			margin-top: 78px
+			.comment_title
+				color: #444
+				font-size: .875em
+.conteiner	
+	.icon, .post i, .about_author .post i, .related_posts .post i
+		display: inline-block
+		margin-bottom: 30px
+		cursor: pointer
+		background-color: #D8D8D8
+		border: 2px solid white
+		@include bs($bs_i-post)
+	.icon:hover, .post i:hover	
+		@include bs(0 0 0 1px rgba(153,153,153,1))
+	.post
+		padding: 1px 5px 0 1px
+		overflow: hidden
+		.post_title 
+			display: inline
+			line-height: 1.5
+			color: #444444
+			font-size: .875em
+		.post_title:hover	
+			color: $color_orange
+		.post_info
+			display: inline-block
+			margin-bottom: 24px
+			color: #aaaaaa
+			font-style: italic
+			font-size: .6875em
+			overflow: hidden
+			a,a:visited
+				color: rgba(#444444,.7)
+				margin-left: 4px
+		.post_text
+			color: #444444
+			font-size: .6875em
+			line-height: 1.8
+			overflow: hidden
+	.post:last-child
+		margin-right: 0	
+.conteiner	
+	.main
+		.latest-posts
+			.post-grid
+				padding-bottom: 37px
+				margin: 34px 0 29px 0
+				overflow: hidden
+				border-bottom: 1px solid #E2E2E2
+				.post
+					max-width: 29.677419%
+					margin-right: 4.032258%
+					float: left
+					i
+						width: 100%
+						height: 144px	
+					.post_info
+						margin: 10px 0 15px	 0
+				.post:last-child
+					margin-right: 0
+			.list-post
+				.post
+					margin-bottom: 28px
+					border-bottom: 1px solid #E2E2E2
+					i
+						width: 109px
+						height: 109px
+						margin-right: 23px
+						float: left
+					.post_info
+						margin: 17px 0 21px	0
+		.pagination
+			/*margin-bottom: 85px*/
+			color: #666666
+			font: 12px "Georgia"
+			font-style: italic
+			a,a:visited
+				margin-right: 8px
+				padding: 7px 10px
+				color: #666666
+				text-align: center
+				border: 1px solid #E2E2E2
+			a:hover
+				color: #444444
+				border: 1px solid #444444
+			a:first-child
+				margin-left: 5px
+				
+/* ***** aside ***** */		
+.conteiner	
+	aside
+		max-width: 31.914895%
+		margin-left: 68.085106%
+		form
+			margin-top: -25px
+			input[type="search"]
+				width: 100%
+				padding: 12px 9px
+				outline: none
+				font: .75em "Arial"
+				color: #999999
+				border: 1px solid #E2E2E2
+				cursor: pointer
+		.subscribe
+			margin-top: 32px
+			font-family: "Arial"
+			a,a:visited
+				position: relative
+				color: #444444
+				font-size: 21px
+				i
+					margin-right: 10px
+					float: left		
+					font-size: 34px
+					line-height: 30px
+				.rss-square
+					color: #fa9f34
+				.twitter-square
+					color: #6BD0EC
+				span
+					position: absolute
+					font-size: 12px
+					color: #888888
+			a:hover > span 		
+				color: #444444
+			a:first-child
+				float: left
+				margin: 0 61px 0 26px
+		.banners	
+			margin-top: 42px
+			i
+				width: 125px
+				height: 125px
+				display: block
+				text-align: center
+				color: #666
+				font: .875em "Arial"
+				line-height: 125px
+				border: 1px solid #D5D5D5
+				@include bs($bs_blocks)
+			i:hover
+				cursor: pointer
+				@include bs($bs_blocks-h)
+			i:nth-child(2n+1)	
+				margin-bottom: 32px
+			i:nth-child(2n)	
+				margin-top: -158px
+				float: right	
+			i:after	
+				content: '125 x 125'
+				font-size: 1em	
+		.tabber
+			margin-top: 52px
+			#tabs
+				overflow: hidden
+				width: 100%
+				margin: 0
+				padding: 0
+				list-style: none
+				li
+					float: left
+					border: 1px solid #D3D3D3
+					border-bottom: none
+				li:first-child	
+					@include br_top-left(5px)	
+				li:last-child	
+					@include br_top-right(5px)		
+				a
+					position: relative
+					padding: 16px 14.54px
+					float: left
+					text-decoration: none
+					font-size: 12px
+					color: #555
+					background: rgba(255,255,255,1)
+					background: -moz-linear-gradient(top, rgba(#F9F9F9,1) 0%, rgba(246,246,246,1) 29%, rgba(247,247,247,1) 42%, rgba(244,244,244,1) 73%, rgba(242,242,242,1) 100%)
+					background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(#F9F9F9,1)), color-stop(29%, rgba(246,246,246,1)), color-stop(42%, rgba(247,247,247,1)), color-stop(73%, rgba(244,244,244,1)), color-stop(100%, rgba(242,242,242,1)))
+					background: -webkit-linear-gradient(top, rgba(#F9F9F9,1) 0%, rgba(246,246,246,1) 29%, rgba(247,247,247,1) 42%, rgba(244,244,244,1) 73%, rgba(242,242,242,1) 100%)
+					background: -o-linear-gradient(top, rgba(#F9F9F9,1) 0%, rgba(246,246,246,1) 29%, rgba(247,247,247,1) 42%, rgba(244,244,244,1) 73%, rgba(242,242,242,1) 100%)
+					background: -ms-linear-gradient(top, rgba(#F9F9F9,1) 0%, rgba(246,246,246,1) 29%, rgba(247,247,247,1) 42%, rgba(244,244,244,1) 73%, rgba(242,242,242,1) 100%)
+					background: linear-gradient(to bottom, rgba(#F9F9F9,1) 0%, rgba(246,246,246,1) 29%, rgba(247,247,247,1) 42%, rgba(244,244,244,1) 73%, rgba(242,242,242,1) 100%)
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F9F9F9', endColorstr='#f2f2f2', GradientType=0 )
+				a:hover,a:focus
+					background: white
+					background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%)
+					background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)))
+					background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%)
+					background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%)
+					background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%)
+					background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%)
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 )
+				a:focus
+					outline: 0
+				#current 
+					a
+						background: #fff
+						z-index: 3
+			#tabber-post
+				position: relative
+				border: 1px solid #D3D3D3
+				border-top: none
+				box-shadow: 0 -2px 3px -2px rgba(0,0,0,.5)
+				background: #fff
+				z-index: 2
+				.post
+					padding: 23px 15px 0 22px
+					border-bottom: 1px solid #E2E2E2
+					i
+						width: 45px
+						height: 45px
+						margin-right: 17px
+						float: left
+					.post_title
+						display: inline
+						margin: -4px 0 7px 0
+						font-size: 12px
+					.post_info	
+						font-size: 11px
+				.post:last-child
+					border-bottom: none
+.conteiner	
+	aside		
+		.video
+			margin-top: 50px
+			iframe
+				width: 300px
+				height: 225px
+				margin-top: 36px
+				@include bs($bs_blocks)
+		.flickr
+			margin-top: 50px
+			.line_title
+				margin-bottom: 33px 
+			.icon
+				width: 60px
+				height: 60px
+				margin-right: 14.6px
+				float: left
+			.icon:nth-child(n+6)
+				margin-top: -18.4px
+			.icon:nth-child(5),	.icon:nth-child(9)
+				margin-right: 0	
+				float: none
+		.archives
+			width: 50%
+			float: left
+			li
+				margin-top: 15px
+				padding-left: 15px
+				font: 12px "Arial"
+				a
+					padding: 4px
+					@include transition(all, .2s, ease-in-out)	
+				a,a:visited
+					color: #444
+				a:hover
+					margin-left: 5px
+					color: $color_orange
+		.sponsors
+			width: 43%
+			margin-left: 21px
+			float: left
+			i:nth-child(2)
+				display: inline-block
+				width: 120px
+				height: 240px
+				margin: 41px 0 0 6px
+				text-align: center
+				line-height: 240px
+				font-size: 14px
+				font-family: "Arial"
+				color: #666
+				border: 1px solid #D5D5D5
+				@include bs($bs_blocks)
+/* ***** footer ***** */					
+footer		
+	clear: both
+	position: relative
+	top: 60px
+	height: 543px	
+	background: #2C2727 url(../img/black_denim.png) repeat
+	@include bs(0 -9px 0 0 rgba(239,239,239,1))	
+	.footer_block
+	.about, .twitter	
+		width: 23.4042553%
+		margin: 71px 20px 0 0
+		float: left
+		color: #8c8989
+		font: 10px "HelveticaNeue bold"
+		line-height: 1.7
+		letter-spacing: .5px	
+	.line_title	
+		margin-bottom: 25px
+		background: url(../img/line1.png)
+		background-size: 100% 100% 
+		i	
+			background: #2C2727 url(../img/black_denim.png)
+	.twitter
+		article
+			padding: 8px 0
+			border-bottom: 1px solid rgba(#676363,.25)
+			box-shadow: 0 1px 0 rgba(255,255,255,.06)
+		a,a:visited
+			color: $color-a
+		a:hover	
+			color: $color-a_hover
+		article:nth-child(2)	
+			padding-top: 0
+		article:nth-child(5)	
+			border-bottom: 0
+			box-shadow: none	
+	.logo	
+		padding-top: 59px
+		overflow: hidden
+		a
+			color: white
+	.footer-btm				
+		position: absolute
+		bottom: 0
+		width: 100%
+		height: 58px
+		line-height: 58px
+		color: #8c8989
+		font-size: .75em 
+		font-family: "Arial"
+		background: rgba(#221F1F,.3)
+		a,a:visited
+			color: $color-a
+		a:hover	
+			color: $color-a_hover
+		p:first-child
+			float: left
+		p:last-child
+			float: right
+			color: white
+
+@import media
+
+
+
+
+
+
+
+
+			

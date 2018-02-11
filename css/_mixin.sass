@@ -1,0 +1,104 @@
+/* ****** @mixin  ****** */	
+@mixin sizing($sizing)
+	-webkit-box-sizing: $sizing
+	-moz-box-sizing: $sizing
+	box-sizing: $sizing
+	-o-box-sizing: $sizing
+@mixin br($br)
+	-webkit-border-radius: $br
+	-moz-border-radius: $br
+	-o-border-radius: $br
+	border-radius: $br
+@mixin br_top($br_top)
+	-webkit-border-top-left-radius: $br_top
+	-webkit-border-top-right-radius: $br_top
+	-moz-border-radius-topleft: $br_top
+	-moz-border-radius-topright: $br_top
+	border-top-left-radius: $br_top
+	border-top-right-radius: $br_top
+@mixin br_top-left($br_top-left)
+	-webkit-border-top-left-radius: $br_top-left
+	-moz-border-radius-topleft: $br_top-left
+	border-top-left-radius: $br_top-left
+@mixin br_top-right($br_top-right)
+	-webkit-border-top-right-radius: $br_top-right
+	-moz-border-radius-topright: $br_top-right
+	border-top-right-radius: $br_top-right	
+@mixin br_bottom($br_bottom)
+	-webkit-border-bottom-left-radius: $br_bottom
+	-webkit-border-bottom-right-radius: $br_bottom
+	-moz-border-radius-bottomleft: $br_bottom
+	-moz-border-radius-bottomright: $br_bottom
+	border-bottom-left-radius: $br_bottom
+	border-bottom-right-radius: $br_bottom
+@mixin br_bottom-left($br_bottom-left)
+	-webkit-border-bottom-left-radius: $br_bottom-left
+	-moz-border-radius-bottomleft: $br_bottom-left
+	border-bottom-left-radius: $br_bottom-left
+@mixin transition($property, $duration, $function)
+	-webkit-transition: $property $duration $function
+	-moz-transition: $property $duration $function
+	-o-transition: $property $duration $function
+	transition: $property $duration $function
+@mixin bs($bs)
+	-webkit-box-shadowbox-shadow: $bs
+	-moz-box-shadowbox-shadow: $bs
+	-o-box-shadow: $bs
+	box-shadow: $bs
+@mixin a
+	color: $main-color
+	text-decoration: none
+	padding-bottom: 1px
+	border-bottom: 1px dashed $main-color
+@mixin opacity($opacity)
+	-khtml-opacity: $opacity
+	-moz-opacity: $opacity
+	opacity: $opacity
+
+/* ****** font-face  ****** */
+@font-face
+	font-family: Gotham Black
+	src: url(fonts/gotham-black.ttf)
+	font: 100%/16px
+@font-face
+	font-family: Gotham Narrow
+	src: url(fonts/Gotham-Narrow.otf)
+	font: 100%/16px
+@font-face
+	font-family: HelveticaNeue bold
+	src: url(fonts/helveticaneuecyr-bold.otf)
+	font: 100%/16px 
+@font-face
+	font-family: HelveticaNeue light
+	src: url(fonts/HelveticaNeue-light.otf)
+	font: 100%/16px 
+@font-face
+	font-family: Hoefler Text
+	src: url(fonts/HoeflerText.ttf)
+	font: 100%/16px 	
+@font-face 
+	font-family: FontAwesome
+	src: url(fonts/fontawesome-webfont.eot?v=4.4.0)
+	src: url(fonts/fontawesome-webfont.eot?#iefix&v=4.4.0) format(embedded-opentype), url(fonts/fontawesome-webfont.woff2?v=4.4.0) format(woff2), url(fonts/fontawesome-webfont.woff?v=4.4.0) format(woff), url(fonts/fontawesome-webfont.ttf?v=4.4.0) format(truetype), url(fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular) format(svg)
+	font-weight: normal
+	font-style: normal	
+	
+/* ****** Variables ****** */		
+$bs_blocks: 0 0 0 6px rgba(239,239,239,.7)
+$bs_blocks-h: 0 0 0 6px rgba(239,239,239,1)
+$bs_i-post: 0 0 0 1px rgba(198,198,198,1)
+$color-a: #bfbfbf
+$color-a_hover: white
+$color_orange: #cc6633
+$QVGA: 320px
+$SVGA: 800px
+$XGA:  1024px
+$HDTV: 1920px
+
+.hidden
+	display: none
+	
+	
+	
+	
+	
